@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+  int array[2][3][3];
+  int i,j,k;
+  int (*p)[3][3];
+  int sum;
+  p=array;
+  printf("\n the elements of 3*3 array are:\n");
+  for(i=0;i<2;i++)
+  { 
+    for(j=0;j<3;j++)
+    {
+      for(k=0;k<3;k++)
+      {
+        scanf("%d",p[i][j]+k);
+        printf("%d\t",p[i][j][k]);
+      }
+      printf("\n");
+    }
+    printf("\n");
+  }
+  for(i=0;i<=2;i++)
+  {
+    for(j=0;j<3;j++)
+    {
+      for(k=0;k<3;k++)
+      {
+        if(j=k)
+        {
+          sum=sum+array[i][j];
+        }
+      }
+    }
+  }
+  printf("one of the diagonal elements is %d",sum);
+  return 0;
+}  
